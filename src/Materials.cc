@@ -26,8 +26,8 @@ namespace Mat
     g_world = nist->FindOrBuildMaterial("G4_AIR");
     g_water = nist->FindOrBuildMaterial("G4_WATER");
 
-    // ==========================
-    // Fuel (OpenMC ile aynı)
+
+    // Fuel
     // ==========================
 
     // İzotop tanımları
@@ -46,7 +46,7 @@ namespace Mat
     auto Oxy = new G4Element("Oxygen16", "O", 1);
     Oxy->AddIsotope(O16, 1.0);
 
-    // Yakıt malzemesi (OpenMC yoğunluğu ile)
+    // Yakıt malzemesi
     g_uo2 = new G4Material("Fuel", 10.29769 * g / cm3, 2);
     g_uo2->AddElement(Uenr, 1);
     g_uo2->AddElement(Oxy, 2);
